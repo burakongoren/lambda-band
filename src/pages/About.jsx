@@ -115,7 +115,7 @@ function About() {
     {
       id: 1,
       name: "Ahmethan Karasu",
-      role: "Lead Vocals",
+      role: "Lead Vocal",
       icon: <FaMicrophone />,
       image: ahmethanImage,
       bio: "Frontman with a distinctive voice that brings emotion to the band's lyrics."
@@ -130,7 +130,7 @@ function About() {
     },
     {
       id: 3,
-      name: "Devrim Odabaşı",
+      name: "Devrim Odabası",
       role: "Lead Guitar",
       icon: <FaGuitar />,
       image: "/members/devrim.jpg",
@@ -138,7 +138,7 @@ function About() {
     },
     {
       id: 4,
-      name: "Oğuz Kaan Özcan",
+      name: "Oguz Kaan Özcan",
       role: "Bass",
       icon: <FaGuitar />,
       image: "/members/oguz.jpg",
@@ -146,7 +146,7 @@ function About() {
     },
     {
       id: 5,
-      name: "Çağatay Biga",
+      name: "Çagatay Biga",
       role: "Drums",
       icon: <FaDrum />,
       image: cagatayImage,

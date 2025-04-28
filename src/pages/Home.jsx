@@ -2,6 +2,7 @@ import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import lambdaImage from '../assets/members/lambda.jpeg';
+import lambdaMobileImage from '../assets/members/lambda-mobile.jpeg';
 import lambdaLogo from '../assets/lambda-logo.png';
 
 const HomeContainer = styled.div`
@@ -18,6 +19,11 @@ const HeroSection = styled.section`
   text-align: center;
   background: linear-gradient(rgba(255, 50, 50, 0.2), rgba(0, 0, 0, 0.7)),
     url(${lambdaImage}) top/cover no-repeat;
+    
+  @media (max-width: 1000px) {
+    background: linear-gradient(rgba(255, 50, 50, 0.2), rgba(0, 0, 0, 0.7)),
+      url(${lambdaMobileImage}) top/cover no-repeat;
+  }
 `;
 
 const HeroContent = styled(motion.div)`

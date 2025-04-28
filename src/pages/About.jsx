@@ -4,6 +4,7 @@ import { FaGuitar, FaDrum, FaMicrophone, FaKeyboard } from 'react-icons/fa';
 import burakImage from '../assets/members/burak.jpeg';
 import cagatayImage from '../assets/members/cagatay.jpeg';
 import ahmethanImage from '../assets/members/ahmethan.jpeg';
+import korayImage from '../assets/members/koray.jpeg';
 import lambdaLogo from '../assets/lambda-logo.png';
 import { Link } from 'react-router-dom';
 
@@ -57,7 +58,7 @@ const BioText = styled.p`
 
 const MembersGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
   padding: 2rem 0;
 `;
@@ -123,7 +124,7 @@ function About() {
     {
       id: 2,
       name: "Burak Öngören",
-      role: " Guitar",
+      role: "Rhythm Guitar",
       icon: <FaGuitar />,
       image: burakImage,
       bio: "Rhythm guitarist who provides solid foundations for the band's sound."
@@ -151,6 +152,13 @@ function About() {
       icon: <FaDrum />,
       image: cagatayImage,
       bio: "Drummer who keeps the rhythm and tempo of the band's performances."
+    },
+    {
+      id: 6,
+      name: "Koray",
+      role: "Mascot",
+      image: korayImage,
+      bio: "Mascot of the LAMBDA"
     }
   ];
 

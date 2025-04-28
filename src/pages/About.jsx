@@ -1,6 +1,11 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { FaGuitar, FaDrum, FaMicrophone, FaKeyboard } from 'react-icons/fa';
+import burakImage from '../assets/members/burak.jpeg';
+import cagatayImage from '../assets/members/cagatay.jpeg';
+import ahmethanImage from '../assets/members/ahmethan.jpeg';
+import lambdaLogo from '../assets/lambda-logo.png';
+import { Link } from 'react-router-dom';
 
 const AboutContainer = styled.div`
   min-height: 100vh;
@@ -13,12 +18,28 @@ const ContentWrapper = styled.div`
   max-width: 1200px;
   margin: 0 auto;
 `;
+const TitleContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+`;
 
 const Title = styled.h1`
-  font-size: 3rem;
-  margin-bottom: 2rem;
+  font-size: 2.8rem;
   text-align: center;
   font-family: 'Rock Salt', cursive;
+`;
+
+const TitleImage = styled.img`
+  height: 65px;
+  margin-left: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: scale(1.1);
+  }
 `;
 
 const BandBio = styled.section`
@@ -96,16 +117,16 @@ function About() {
       name: "Ahmethan Karasu",
       role: "Lead Vocals",
       icon: <FaMicrophone />,
-      image: "/members/ahmethan.jpg",
-      bio: "Frontman with a voice that can shake arenas and lyrics that touch souls."
+      image: ahmethanImage,
+      bio: "Frontman with a distinctive voice that brings emotion to the band's lyrics."
     },
     {
       id: 2,
       name: "Burak Öngören",
       role: " Guitar",
       icon: <FaGuitar />,
-      image: "/members/burak.jpg",
-      bio: "Guitar virtuoso known for mind-bending solos and innovative riffs."
+      image: burakImage,
+      bio: "Rhythm guitarist who provides solid foundations for the band's sound."
     },
     {
       id: 3,
@@ -113,7 +134,7 @@ function About() {
       role: "Lead Guitar",
       icon: <FaGuitar />,
       image: "/members/devrim.jpg",
-      bio: "Rhythm master who keeps the band's heartbeat strong and steady."
+      bio: "Lead guitarist who adds melodic elements to the band's music."
     },
     {
       id: 4,
@@ -121,29 +142,31 @@ function About() {
       role: "Bass",
       icon: <FaGuitar />,
       image: "/members/oguz.jpg",
-      bio: "Rhythm master who keeps the band's heartbeat strong and steady."
+      bio: "Bassist who provides the groove and depth to the band's sound."
     },
     {
       id: 5,
       name: "Çağatay Biga",
       role: "Drums",
       icon: <FaDrum />,
-      image: "/members/cagatay.jpg",
-      bio: "Classically trained pianist who brings depth and texture to the band's sound."
+      image: cagatayImage,
+      bio: "Drummer who keeps the rhythm and tempo of the band's performances."
     }
   ];
 
   return (
     <AboutContainer>
       <ContentWrapper>
-        <Title>About LAMBDA</Title>
+        <TitleContainer>
+          <Title>About </Title>
+          <Link to="/">
+            <TitleImage src={lambdaLogo} alt="Lambda Logo" />
+          </Link>
+        </TitleContainer>
         <BandBio>
           <BioText>
-            Formed in 2020, LAMBDA has been pushing the boundaries of rock music,
-            blending classic rock elements with modern electronic influences. Their
-            unique sound has earned them a dedicated following and critical acclaim
-            across the globe. With three studio albums under their belt and countless
-            sold-out shows, LAMBDA continues to evolve and inspire.
+            Formed in 2023, LAMBDA has been pushing the boundaries of alternativerock music,
+            blending classic rock elements with modern pop and electronic elements. 
           </BioText>
         </BandBio>
         <MembersGrid>

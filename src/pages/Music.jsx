@@ -98,14 +98,14 @@ function Music() {
         <VideoSection>
           <VideoWrapper>
             <VideoFrame
-              src="https://www.youtube.com/embed/VassFJpR2f8"
+              src="https://www.youtube.com/embed/7xaUMHgUeRE"
               title="LAMBDA - Official Music Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             />
           </VideoWrapper>
         </VideoSection>
-        <MusicPlayer>
+        {/* <MusicPlayer>
           <TrackList>
             {tracks.map((track) => (
               <Track
@@ -120,7 +120,7 @@ function Music() {
               </Track>
             ))}
           </TrackList>
-        </MusicPlayer>
+        </MusicPlayer> */}
       </ContentWrapper>
     </MusicContainer>
   );

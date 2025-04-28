@@ -14,16 +14,22 @@ const NavContainer = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 `;
 
 const Logo = styled(Link)`
+  display: flex;
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
   text-decoration: none;
   font-family: 'Rock Salt', cursive;
+`;
+
+const LogoImage = styled.img`
+  height: 60px;
+  margin-right: 1rem;
 `;
 
 const NavLinks = styled.div`
@@ -46,11 +52,13 @@ function Navbar() {
   return (
     <Nav>
       <NavContainer>
-        <Logo to="/">LAMBDA</Logo>
+        {/* <Logo to="/">
+          <LogoImage src="src/assets/lambda-logo.png" alt="Lambda" />
+        </Logo> */}
         <NavLinks>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/music">Music</NavLink>
-          <NavLink to="/tour">Tour</NavLink>
+          {/* <NavLink to="/tour">Tour</NavLink> */}
           <NavLink to="/about">About</NavLink>
         </NavLinks>
       </NavContainer>

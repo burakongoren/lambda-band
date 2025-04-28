@@ -71,16 +71,10 @@ function Footer() {
         <FooterSection>
           <FooterTitle>Connect With Us</FooterTitle>
           <SocialLinks>
-            <SocialLink href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <FaFacebook />
-            </SocialLink>
-            <SocialLink href="https://twitter.com" target="_blank" rel="noopener noreferrer">
-              <FaTwitter />
-            </SocialLink>
-            <SocialLink href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://instagram.com/lambdamuzik" target="_blank" rel="noopener noreferrer">
               <FaInstagram />
             </SocialLink>
-            <SocialLink href="https://youtube.com" target="_blank" rel="noopener noreferrer">
+            <SocialLink href="https://youtube.com/@LAMBDA0001" target="_blank" rel="noopener noreferrer">
               <FaYoutube />
             </SocialLink>
           </SocialLinks>
@@ -88,9 +82,8 @@ function Footer() {
         <FooterSection>
           <FooterTitle>Contact</FooterTitle>
           <FooterText>
-            Email: info@lambdaband.com<br />
-            Management: management@lambdaband.com<br />
-            Booking: booking@lambdaband.com
+            Email: lambdatheband@gmail.com<br />
+            Booking: +90 554 690 7685
           </FooterText>
         </FooterSection>
       </FooterContent>

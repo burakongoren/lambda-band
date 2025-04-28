@@ -1,6 +1,8 @@
 import styled from '@emotion/styled';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import lambdaImage from '../assets/members/lambda.jpeg';
+import lambdaLogo from '../assets/lambda-logo.png';
 
 const HomeContainer = styled.div`
   min-height: 100vh;
@@ -14,17 +16,18 @@ const HeroSection = styled.section`
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url('/hero-bg.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(255, 50, 50, 0.2), rgba(0, 0, 0, 0.7)),
+    url(${lambdaImage}) top/cover no-repeat;
 `;
 
 const HeroContent = styled(motion.div)`
   max-width: 800px;
   padding: 2rem;
+  margin-top: 16rem;
 `;
 
 const Title = styled(motion.h1)`
-  font-size: 4rem;
+  font-size: 1rem;
   margin-bottom: 1rem;
   font-family: 'Rock Salt', cursive;
 `;
@@ -63,7 +66,7 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            LAMBDA
+            <img src={lambdaLogo} alt="Lambda Logo" />
           </Title>
           <Subtitle
             initial={{ opacity: 0, y: 20 }}

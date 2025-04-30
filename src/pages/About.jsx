@@ -5,6 +5,7 @@ import burakImage from '../assets/members/burak.jpeg';
 import cagatayImage from '../assets/members/cagatay.jpeg';
 import ahmethanImage from '../assets/members/ahmethan.jpeg';
 import oguzImage from '../assets/members/oguz.jpg';
+import devrimImage from '../assets/members/devrim.png';
 import korayImage from '../assets/members/koray.jpeg';
 import lambdaLogo from '../assets/lambda-logo.png';
 import { Link } from 'react-router-dom';
@@ -135,7 +136,7 @@ function About() {
       name: "Devrim Odabası",
       role: "Lead Guitar",
       icon: <FaGuitar />,
-      image: "/members/devrim.jpg",
+      image: devrimImage,
       bio: "Lead guitarist who adds melodic elements to the band's music."
     },
     {

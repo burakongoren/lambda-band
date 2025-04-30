@@ -4,6 +4,7 @@ import { FaGuitar, FaDrum, FaMicrophone, FaKeyboard } from 'react-icons/fa';
 import burakImage from '../assets/members/burak.jpeg';
 import cagatayImage from '../assets/members/cagatay.jpeg';
 import ahmethanImage from '../assets/members/ahmethan.jpeg';
+import oguzImage from '../assets/members/oguz.jpg';
 import korayImage from '../assets/members/koray.jpeg';
 import lambdaLogo from '../assets/lambda-logo.png';
 import { Link } from 'react-router-dom';
@@ -142,7 +143,7 @@ function About() {
       name: "Oguz Kaan Özcan",
       role: "Bass",
       icon: <FaGuitar />,
-      image: "/members/oguz.jpg",
+      image: oguzImage,
       bio: "Bassist who provides the groove and depth to the band's sound."
     },
     {

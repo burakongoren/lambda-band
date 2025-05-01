@@ -165,7 +165,7 @@ function About() {
   ];
 
   return (
-    <AboutContainer>
+    <AboutContainer id="about">
       <ContentWrapper>
         <TitleContainer>
           <Title>About </Title>

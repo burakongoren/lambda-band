@@ -48,6 +48,18 @@ const NavLink = styled(Link)`
   }
 `;
 
+// Special link for anchor navigation
+const AnchorNavLink = styled.a`
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #ff4d4d;
+  }
+`;
+
 function Navbar() {
   return (
     <Nav>
@@ -56,10 +68,10 @@ function Navbar() {
           <LogoImage src="src/assets/lambda-logo.png" alt="Lambda" />
         </Logo> */}
         <NavLinks>
-          <NavLink to="/">Home</NavLink>
-          <NavLink to="/music">Music</NavLink>
+          <AnchorNavLink href="/#home">Home</AnchorNavLink>
           {/* <NavLink to="/tour">Tour</NavLink> */}
-          <NavLink to="/about">About</NavLink>
+          <AnchorNavLink href="/#about">About</AnchorNavLink>
+          <AnchorNavLink href="/#music">Music</AnchorNavLink>
         </NavLinks>
       </NavContainer>
     </Nav>

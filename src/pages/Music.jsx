@@ -83,18 +83,19 @@ const TrackDuration = styled.span`
 `;
 
 function Music() {
-  const tracks = [
+  // Commented out to fix linter error
+  /* const tracks = [
     { id: 1, title: "Electric Dreams", duration: "3:45" },
     { id: 2, title: "Neon Nights", duration: "4:20" },
     { id: 3, title: "Digital Revolution", duration: "5:15" },
     { id: 4, title: "Binary Sunset", duration: "3:55" },
     { id: 5, title: "Code Breaker", duration: "4:10" },
-  ];
+  ]; */
 
   return (
-    <MusicContainer>
+    <MusicContainer id="music">
       <ContentWrapper>
-        <Title>Music</Title>
+        <Title>Live Performance</Title>
         <VideoSection>
           <VideoWrapper>
             <VideoFrame

@@ -4,6 +4,9 @@ import { Link } from 'react-router-dom';
 import lambdaImage from '../assets/members/lambda.jpeg';
 import lambdaMobileImage from '../assets/members/lambda-mobile.jpeg';
 import lambdaLogo from '../assets/lambda-logo.png';
+import { useState, useEffect } from 'react';
+import About from './About';
+import Music from './Music';
 
 const HomeContainer = styled.div`
   min-height: 100vh;
@@ -43,7 +46,7 @@ const Subtitle = styled(motion.p)`
   margin-bottom: 2rem;
 `;
 
-const CTAButton = styled(Link)`
+const CTAButton = styled.a`
   display: inline-block;
   padding: 1rem 2rem;
   background-color: #ff4d4d;
@@ -58,9 +61,56 @@ const CTAButton = styled(Link)`
   }
 `;
 
+const ScrollToTopButton = styled.button`
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  z-index: 999;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: #ff3333;
+    transform: translateY(-3px);
+  }
+`;
+
 function Home() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 300) {
+        setShowScrollButton(true);
+      } else {
+        setShowScrollButton(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   return (
-    <HomeContainer>
+    <HomeContainer id="home">
       <HeroSection>
         <HeroContent
           initial={{ opacity: 0, y: 20 }}
@@ -86,10 +136,17 @@ function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.6 }}
           >
-            <CTAButton to="/music">Listen Now</CTAButton>
+            <CTAButton href="/#music">Listen Now</CTAButton>
           </motion.div>
         </HeroContent>
       </HeroSection>
+      <About />
+      <Music />
+      {showScrollButton && (
+        <ScrollToTopButton onClick={scrollToTop}>
+          ↑
+        </ScrollToTopButton>
+      )}
     </HomeContainer>
   );
 }

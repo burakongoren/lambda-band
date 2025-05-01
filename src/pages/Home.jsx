@@ -5,6 +5,7 @@ import lambdaImage from '../assets/members/lambda.jpeg';
 import lambdaMobileImage from '../assets/members/lambda-mobile.jpeg';
 import lambdaLogo from '../assets/lambda-logo.png';
 import { useState, useEffect } from 'react';
+import { FaAngleUp } from 'react-icons/fa';
 import About from './About';
 import Music from './Music';
 
@@ -144,7 +145,7 @@ function Home() {
       <Music />
       {showScrollButton && (
         <ScrollToTopButton onClick={scrollToTop}>
-          ↑
+          <FaAngleUp />
         </ScrollToTopButton>
       )}
     </HomeContainer>

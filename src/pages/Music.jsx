@@ -99,7 +99,7 @@ function Music() {
         <VideoSection>
           <VideoWrapper>
             <VideoFrame
-              src="https://youtu.be/Fv84xJY8nkU"
+              src="https://www.youtube.com/embed/Fv84xJY8nkU"
               title="LAMBDA - Official Music Video"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
